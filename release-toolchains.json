@@ -1,0 +1,11 @@
+{
+  "node": "24.15.0",
+  "npm": "11.18.0",
+  "opencode": "1.18.35",
+  "runner": "ubuntu-24.04",
+  "installScripts": {
+    "default": "deny: npm ci --ignore-scripts",
+    "opencode-ai@1.18.35": "allow only its published postinstall.mjs for native host verification; distributed by the official opencode-ai npm package",
+    "esbuild@0.25.11": "deny; npm's optional platform binary supports this build without its install script"
+  }
+}

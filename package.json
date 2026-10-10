@@ -1,0 +1,55 @@
+{
+  "name": "@mypenny/opencode",
+  "version": "0.1.0",
+  "description": "Penny private memory and lifecycle guidance for OpenCode",
+  "type": "module",
+  "license": "MIT",
+  "author": "HelperLabs",
+  "homepage": "https://mypenny.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HelperLabs/penny-opencode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HelperLabs/penny-opencode/issues"
+  },
+  "engines": {
+    "node": ">=22",
+    "opencode": "1.18.35"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "bin": {
+    "penny-opencode": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "VERIFICATION.md",
+    "release-dependencies.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "verify:host": "node scripts/verify-host.mjs"
+  },
+  "dependencies": {
+    "@opencode-ai/plugin": "1.18.35"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.7",
+    "esbuild": "0.25.11",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "opencode-ai": "1.18.35"
+  }
+}
